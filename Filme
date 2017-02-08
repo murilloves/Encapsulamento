@@ -1,0 +1,80 @@
+package appfilme;
+
+public class Filme extends one implements neo, eno{
+    private String codigo;
+    private String nome;
+    private String genero;
+    private int ano;
+    private String autor;
+
+    private static int total = 0;
+
+// ******* METODO CONSTRUTOR ******* \\
+    public Filme (String Nome, String Codigo)
+    {
+        codigo = Codigo;
+        nome = Nome;
+        total++;
+    }
+
+// ******* METODOS GET ******* \\
+    public String getCodigo()
+    {
+          return codigo;
+    }
+    public String getNome()
+    {
+      return nome;
+    }
+    public String getGenero()
+    {
+      return genero;
+    }
+    public int getAno()
+    {
+      return ano;
+    }
+    public String getAutor()
+    {
+          return autor;
+    }
+
+// ******* METODOS SET ******* \\
+    public void setCodigo(String Codigo)
+    {
+          codigo = Codigo;
+    }
+    public void setNome(String Nome)
+    {
+          nome = Nome;
+    }
+    public void setGenero(String Genero)
+    {
+          genero = Genero;
+    }
+    public void setAno(int Ano)
+    {
+          ano = Ano;
+    }
+    public void setAutor(String Autor)
+    {
+          autor = Autor;
+    }
+
+
+// ******* OUTROS METODOS ******* \\
+    public int getTotalFilmes()
+    {
+        return total;
+    }
+    public void mostraDados(){
+        System.out.println("\n");
+        System.out.println("Nome do Filme: " + this.getNome());
+        System.out.println("Codigo: " + this.getCodigo());
+        System.out.println("Ano de lançamento: " + this.getAno());
+        System.out.println("Gênero: " + this.getGenero());
+        System.out.println("Autor: " + this.getAutor());
+        System.out.println("\n");
+    }
+
+}
